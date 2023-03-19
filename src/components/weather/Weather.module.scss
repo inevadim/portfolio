@@ -1,0 +1,82 @@
+
+@mixin styleItem{
+    font-family: "Montserrat", "Arial", sans-serif;
+    --color: #fff;
+	--color-accent-1: hsl(50, 100%, 79%);
+	--color-accent-2: hsl(340, 36%, 66%);
+    filter: drop-shadow(0.15em 0.1em 0.3em var(--color-accent-2));
+    color: mix(#fff, #e91e63, 85%);
+	color: var(--color);
+    font-weight: 800;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.wrapper{
+    font-family: 'Outfit', 'Segoe Ui', 'Roboto', 'Oxygen';
+    // background-color: red;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(./../../assets/img/weather/back.jpg) no-repeat;
+    background-size: cover;
+    border-radius: 50px;
+    .weatherWrapper{
+        width: 500px;
+        height: 400px;
+        // background-color: green;
+        
+        border-radius: 10px;
+
+        .city{
+            @include styleItem;
+        }
+
+        .temp{
+            @include styleItem;
+        }
+
+        .winds{
+            @include styleItem;
+        }
+
+        .weather{
+            @include styleItem;
+        }
+
+        .nameApp{
+            display: flex;
+            justify-content: center;
+            font-size: 30px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 10px;
+           
+            --color-accent-2: hsl(340, 36%, 66%);
+            filter: drop-shadow(0.15em 0.1em 0.3em var(--color-accent-2));
+        }
+
+        .inputApp{
+            display: flex;
+            justify-content: center;
+            input{
+                border-radius: 5px;
+                font-weight: 800;
+                --color: #a29f9f;
+	--color-accent-1: hsl(50, 100%, 79%);
+	--color-accent-2: hsl(340, 36%, 66%);
+    filter: drop-shadow(0.15em 0.1em 0.3em var(--color-accent-2));
+    color: mix(#fff, #e91e63, 85%);
+	color: var(--color);
+            }
+            
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .wrapper{border-radius: 0px;}
+}

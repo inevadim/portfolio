@@ -1,0 +1,114 @@
+.wrapper{
+    // border: 1px solid;
+    // background-color: rgb(245, 246, 245);
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 500px;
+    height: 90%;
+    overflow: hidden;
+    overflow-y: auto;
+    // border-color: #150;
+    // border-radius: 5px;
+
+
+    backdrop-filter: blur(3px) saturate(200%);
+    -webkit-backdrop-filter: blur(3px) saturate(200%);
+    background-color: rgba(17, 25, 40, 0.61);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+
+    .wrapperHead{
+        display: flex;
+        flex-direction: row;
+        // background-color: rebeccapurple;
+        // justify-content: center;
+        align-items: center;
+        
+        .inputWrapper{
+            input{
+                font-size: 30px;
+                margin-left: 10px;
+                margin-top: 10px;
+                width: 400px;
+                border-radius: 5px;
+                color: rgb(81, 29, 82);
+            }
+        }
+    }
+
+    .plus{
+        color:#150;
+        border: 2px solid;
+        background-color: rgb(52, 128, 34);
+        margin-top: 10px;
+        margin-left: 10px;
+        border-radius: 50px;
+        padding: 10px;
+        font-size: 30px;
+        font-weight: 600;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        
+    }
+
+    .item{
+        border: 1.5px solid;
+        border-radius: 5px;
+        border-color: rgb(81, 29, 82);
+        color:rgb(119, 14, 123);
+        width: 90%;
+        // height: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 5px;
+        margin-right: 60px;
+        cursor: pointer;
+        padding: 5px;
+        font-weight: 600;
+        backdrop-filter: blur(3px) saturate(200%);
+    -webkit-backdrop-filter: blur(3px) saturate(200%);
+    background-color: rgba(17, 25, 40, 0.11);
+    // border-radius: 12px;
+    // border: 1px solid rgba(255, 255, 255, 0.125);
+        .name{
+            width: 90%;
+        }
+
+        .minus{
+            color: rgb(215, 138, 138);
+            font-size: 15px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50px;
+            background-color: rgb(223, 47, 47);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 5px;
+            &:hover{
+                background-color: rgb(171, 35, 35);
+                color: rgb(160, 105, 105);
+            }
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .wrapper{
+        width: 90%;
+        .wrapperHead{
+            width: 90%;
+            .inputWrapper{
+                input{
+                    width: 90%;
+                }
+            }
+        }
+    }
+}
