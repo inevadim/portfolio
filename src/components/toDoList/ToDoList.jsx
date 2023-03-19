@@ -10,10 +10,6 @@ import { addItem, deleteItem } from '../../redux/toDoListSlice';
 export const ToDoList = () => {
   const listItems = useSelector(state => state.toDoList.value);
   const dispatch = useDispatch();
-  // const [toDo, setToDo] = useState([
-  //   { name: 'TypeScript ', status: 'active', id: v4() },
-  //   { name: 'Redux Toolkit', status: 'active', id: v4() },
-  // ]);
   const [toDo, setToDo] = useState(listItems);
 
   const [inputState, setInputState] = useState('');
@@ -58,7 +54,7 @@ export const ToDoList = () => {
       </div>
       <AnimatePresence>
         <Reorder.Group values={toDo} onReorder={setToDo}>
-          {listItems.map(item => (
+          {toDo.map(item => (
             <Reorder.Item key={item.id} value={item}>
               <motion.div
                 initial={{ x: -300, opacity: 0 }}
