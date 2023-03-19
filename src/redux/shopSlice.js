@@ -4,7 +4,7 @@ const initialState = {
   value: JSON.parse(localStorage.getItem('shop')) || [],
   valueVisible: false,
   valueEdit: [],
-  menuValue: JSON.parse(localStorage.getItem('menu')),
+  menuValue: JSON.parse(localStorage.getItem('menu')) || [],
 };
 export const shopSlice = createSlice({
   name: 'shop',

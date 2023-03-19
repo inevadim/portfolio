@@ -11,10 +11,22 @@ export const Menu = () => {
   const dispatch = useDispatch();
 
   const listItems = useSelector(state => state.shop.menuValue);
+  // if(listItems == null){const [menu, setMenu] = useState(listItems)} else{const [menu, setMenu] = useState(['ToDo', 'Shop', 'Weather', 'Weather'])}}
   const [menu, setMenu] = useState(listItems);
 
   useEffect(() => {
-    setMenu(JSON.parse(localStorage.getItem('menu')));
+    const i = JSON.parse(localStorage.getItem('menu'));
+    if (i != null) {
+      setMenu(i);
+    } else {
+    }
+    // setMenu(i);
+    // localStorage.setItem('menu', JSON.stringify(menu));
+    // if (menu == null) {
+    //   setMenu(['ToDo, Shop, Weather']);
+    // } else {
+    //   setMenu(JSON.parse(localStorage.getItem('menu')));
+    // }
     // console.log('change', menu);
     // const listItems = useSelector(state => state.shop.menuValue);
   }, [listItems]);
