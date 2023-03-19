@@ -1,0 +1,40 @@
+{
+  "shop_item": [
+    {
+      "id": 1,
+      "name": "Jordan One Paris",
+      "price": 165,
+      "imgUrl": "./assets/img/shop/jordanOneParis.png"
+    },
+    {
+      "id": 2,
+      "name": "Nike Dunk High Up WMNS",
+      "price": 250,
+      "imgUrl": "/assets/img/shop/nikeDunkHighUpWmns.png"
+    },
+    {
+      "id": 3,
+      "name": "Nike Shox TL White",
+      "price": 195,
+      "imgUrl": "assets/img/shop/nikeShoxTLWhite.png"
+    },
+    {
+      "id": 4,
+      "name": "Nike SB Dunk GR/FI",
+      "price": 165,
+      "imgUrl": "/assets/img/shop/nikeSBDunkGRFI.png"
+    },
+    {
+      "id": 5,
+      "name": "Saucony Jazz Black",
+      "price": 165,
+      "imgUrl": "/assets/img/shop/sauconyJazzBlack.png"
+    },
+    {
+      "id": 6,
+      "name": "Nike SB Off-Wite Mult",
+      "price": 165,
+      "imgUrl": "/assets/img/shop/nikeSBOffWiteMult.png"
+    }
+  ]
+}
