@@ -10,6 +10,7 @@ import { Panel } from './panel/Panel';
 
 export const Shop = () => {
   const [mas, setMas] = useState([]);
+  const [isLoad, setIsLoad] = useState(false);
   const listItems = useSelector(state => state.shop.value);
   const visible = useSelector(state => state.shop.valueVisible);
   const dispatch = useDispatch();
@@ -18,23 +19,30 @@ export const Shop = () => {
   };
 
   useEffect(() => {
-    axios.get('bdShop.json').then(({ data }) => {
+    axios.get('/bdShop.json').then(({ data }) => {
       setMas(data.shop_item);
+      setIsLoad(true);
     });
   }, [setMas]);
+
   return (
     <div>
-      <div className={styles.shop}>
-        {mas.map(item => {
-          return (
-            <div key={item.id}>
-              <Card id={item.id} name={item.name} price={item.price} imgUrl={item.imgUrl} />
-            </div>
-          );
-        })}
+      {isLoad ? (
+        <div className={styles.shop}>
+          {mas.map(item => {
+            return (
+              <div key={item.id}>
+                <Card id={item.id} name={item.name} price={item.price} imgUrl={item.imgUrl} />
+              </div>
+            );
+          })}
 
-        {/* <div className={styles.arrow2}></div> */}
-      </div>
+          {/* <div className={styles.arrow2}></div> */}
+        </div>
+      ) : (
+        <div style={{ marginLeft: '100px', marginTop: '30px' }}>Loading...</div>
+      )}
+
       <div className={styles.arrow} onClick={() => visibleItem()}>
         <div className={styles.arrowInner}>
           <FontAwesomeIcon icon={faBasketShopping} />
