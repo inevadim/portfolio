@@ -131,7 +131,12 @@
 
 @media (max-width: 640px) {
     .wrapper{
+        // overflow: hidden;
         width: 90%;
+        height: 470px;
+        .wrapperItems{
+            height: 380px;
+        }
         .wrapperHead{
             width: 90%;
             .inputWrapper{
