@@ -14,15 +14,60 @@ export const Shop = () => {
   const listItems = useSelector(state => state.shop.value);
   const visible = useSelector(state => state.shop.valueVisible);
   const dispatch = useDispatch();
+
+  const i = [
+    {
+      id: 1,
+      name: 'Jordan One Paris',
+      price: 165,
+      imgUrl: 'https://i.postimg.cc/8knr3Lfg/jordan-One-Paris.png',
+    },
+    {
+      id: 2,
+      name: 'Nike Dunk High Up WMNS',
+      price: 250,
+      imgUrl: 'https://i.postimg.cc/qqYh3dHv/nike-Dunk-High-Up-Wmns.png',
+    },
+    {
+      id: 3,
+      name: 'Nike Shox TL White',
+      price: 195,
+      imgUrl: 'https://i.postimg.cc/1zPg6H2w/nike-Shox-TLWhite.png',
+    },
+    {
+      id: 4,
+      name: 'Nike SB Dunk GR/FI',
+      price: 165,
+      imgUrl: 'https://i.postimg.cc/28sLjmxH/nike-SBDunk-GRFI.png',
+    },
+    {
+      id: 5,
+      name: 'Saucony Jazz Black',
+      price: 165,
+      imgUrl: 'https://i.postimg.cc/sDQZR15Q/saucony-Jazz-Black.png',
+    },
+    {
+      id: 6,
+      name: 'Nike SB Off-Wite Mult',
+      price: 165,
+      imgUrl: 'https://i.postimg.cc/RZw6N8sv/nike-SBOff-Wite-Mult.png',
+    },
+  ];
+
   const visibleItem = () => {
     return dispatch(visibleShop());
   };
 
+  // useEffect(() => {
+  //   axios.get('./bdShop.json').then(({ data }) => {
+  //     setMas(data.shop_item);
+  //     setIsLoad(true);
+  //   });
+  // }, [setMas]);
+
   useEffect(() => {
-    axios.get('/bdShop.json').then(({ data }) => {
-      setMas(data.shop_item);
-      setIsLoad(true);
-    });
+    setMas(i);
+    setIsLoad(true);
   }, [setMas]);
 
   return (

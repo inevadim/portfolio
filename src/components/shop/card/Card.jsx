@@ -1,12 +1,13 @@
 import styles from './Card.module.scss';
 import { useDispatch } from 'react-redux';
 import { addItem } from '../../../redux/shopSlice';
+import { v4 } from 'uuid';
 export const Card = ({ id, name, price, imgUrl }) => {
   const dispatch = useDispatch();
-  const addItems = (name, imgUrl) => {
-    console.log(name);
-    console.log(name.imgUrl);
+
+  const addItems = name => {
     const objItem = {
+      id: v4(),
       name: name.name,
       price,
       imgUrl: name.imgUrl,

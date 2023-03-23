@@ -15,7 +15,7 @@ export const shopSlice = createSlice({
       localStorage.setItem('shop', JSON.stringify(state.value));
     },
     deleteItem: (state, action) => {
-      state.value = state.value.filter(item => item.name !== action.payload);
+      state.value = state.value.filter(item => item.id !== action.payload);
       localStorage.setItem('shop', JSON.stringify(state.value));
     },
     addItemMenu: (state, action) => {

@@ -1,16 +1,17 @@
 import styles from './Panel.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteItem } from '../../../redux/shopSlice';
+import { visibleShop } from '../../../redux/shopSlice';
 
 export const Panel = () => {
   const listItems = useSelector(state => state.shop.value);
   const dispatch = useDispatch();
-  const deleteItems = itemName => {
-    return dispatch(deleteItem(itemName));
+  const deleteItems = itemId => {
+    return dispatch(deleteItem(itemId));
   };
-  // const visibleItem = () => {
-  //   return dispatch(visibleShop());
-  // };
+  const visibleItem = () => {
+    return dispatch(visibleShop());
+  };
   return (
     <div className={styles.wrapper}>
       <div className={styles.wraperItem}>
@@ -28,7 +29,7 @@ export const Panel = () => {
                 {/* <div className={styles.deleteItem} onClick={() => deleteItems(item.name)}>
                 ❌
               </div> */}
-                <div className={styles.deleteItem} onClick={() => deleteItems(item.name)}>
+                <div className={styles.deleteItem} onClick={() => deleteItems(item.id)}>
                   ❌
                 </div>
               </div>
@@ -45,7 +46,9 @@ export const Panel = () => {
               .reduce((sum, current) => sum + current, 0)}{' '}
             byn
           </div>
-          <div className={styles.buy}>BUY</div>
+          <div className={styles.buy} onClick={() => visibleItem()}>
+            BUY
+          </div>
         </div>
       </div>
     </div>
