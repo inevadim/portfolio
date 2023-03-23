@@ -56,7 +56,7 @@ export const Menu = () => {
                 <div className={styles.item}>
                   {/* <NavLink></NavLink> */}
                   <NavLink
-                    to={item}
+                    to={`portfolio/${item}`}
                     style={({ isActive, isPending }) => {
                       return {
                         color: isActive ? 'rgb(241, 234, 234)' : '',

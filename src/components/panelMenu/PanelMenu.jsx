@@ -11,13 +11,13 @@ export const PanelMenu = () => {
   };
   return (
     <div className={styles.wrapper}>
-      <Link to="/ToDo" onClick={() => addItems('ToDo')}>
+      <Link to="portfolio/ToDo" onClick={() => addItems('ToDo')}>
         <Card name="ToDo List" icon="faListCheck" />
       </Link>
-      <Link to="/Shop" onClick={() => dispatch(addItemMenu('Shop'))}>
+      <Link to="portfolio/Shop" onClick={() => dispatch(addItemMenu('Shop'))}>
         <Card name="Shop" icon="faBasketShopping" />
       </Link>
-      <Link to="/Weather" onClick={() => dispatch(addItemMenu('Weather'))}>
+      <Link to="portfolio/Weather" onClick={() => dispatch(addItemMenu('Weather'))}>
         <Card name="Weather" icon="faCloud" />
       </Link>
       <a href="http://sopockin-museum.j29866cb.beget.tech/" target={'_blank'}>

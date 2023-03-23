@@ -10,9 +10,10 @@ export const Body = () => {
     <div className={styles.wrapper}>
       <Routes>
         <Route path="/" element={<PanelMenu />} />
-        <Route path="/ToDo" element={<ToDoList />} />
-        <Route path="/Shop" element={<Shop />} />
-        <Route path="/Weather" element={<Weather />} />
+        <Route path="portfolio/" element={<PanelMenu />} />
+        <Route path="portfolio/ToDo" element={<ToDoList />} />
+        <Route path="portfolio/Shop" element={<Shop />} />
+        <Route path="portfolio/Weather" element={<Weather />} />
         <Route path="*" element={<PanelMenu />} />
       </Routes>
     </div>
