@@ -1,6 +1,6 @@
 import { Card } from './card/Card';
 import styles from './Shop.module.scss';
-import axios from 'axios';
+// import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { visibleShop } from '../../redux/shopSlice';
