@@ -5,8 +5,8 @@
     margin-top: 20px;
     width: 500px;
     height: 90%;
-    overflow: hidden;
-    overflow-y: auto;
+    
+ 
     // border-color: #150;
     // border-radius: 5px;
 
@@ -54,7 +54,23 @@
         cursor: pointer;
         
     }
-
+    .wrapperItems{
+        overflow: hidden;
+    overflow-y: auto;
+    height: 350px;
+        &::-webkit-scrollbar{
+            width: 8px;
+            
+        }
+        &::-webkit-scrollbar-thumb{
+            width: 20px;
+            height: 20px;
+            background: rgb(68, 18, 118);
+            // border-radius: 3px;
+        }
+        &::-webkit-scrollbar-track{
+            background: #dddd;
+        }
     .item{
         border: 1.5px solid;
         border-radius: 5px;
@@ -97,6 +113,7 @@
             }
         }
     }
+}
 }
 
 @media (max-width: 640px) {

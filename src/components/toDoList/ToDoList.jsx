@@ -54,19 +54,21 @@ export const ToDoList = () => {
       </div>
       <AnimatePresence>
         <Reorder.Group values={toDo} onReorder={setToDo}>
-          {toDo.map(item => (
-            <Reorder.Item key={item.id} value={item}>
-              <motion.div
-                initial={{ x: -300, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                className={styles.item}>
-                <div className={styles.name}>{item.name}</div>
-                <div className={styles.minus} onClick={() => deleteItems(item.id)}>
-                  <FontAwesomeIcon icon={faMinus} />
-                </div>
-              </motion.div>
-            </Reorder.Item>
-          ))}
+          <div className={styles.wrapperItems}>
+            {toDo.map(item => (
+              <Reorder.Item key={item.id} value={item}>
+                <motion.div
+                  initial={{ x: -300, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  className={styles.item}>
+                  <div className={styles.name}>{item.name}</div>
+                  <div className={styles.minus} onClick={() => deleteItems(item.id)}>
+                    <FontAwesomeIcon icon={faMinus} />
+                  </div>
+                </motion.div>
+              </Reorder.Item>
+            ))}
+          </div>
         </Reorder.Group>
       </AnimatePresence>
     </div>
