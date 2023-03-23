@@ -20,7 +20,9 @@ export const PanelMenu = () => {
       <Link to="/Weather" onClick={() => dispatch(addItemMenu('Weather'))}>
         <Card name="Weather" icon="faCloud" />
       </Link>
-      <Card name="Developing..." />
+      <a href="http://sopockin-museum.j29866cb.beget.tech/" target={'_blank'}>
+        <Card name="Museum" />
+      </a>
       <Card name="Developing..." />
       <Card name="Developing..." />
     </div>

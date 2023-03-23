@@ -5,6 +5,7 @@ import {
   faCloud,
   faListCheck,
   faWrench,
+  faLandmark,
 } from '@fortawesome/free-solid-svg-icons';
 
 export const Card = ({ name }) => {
@@ -22,6 +23,8 @@ export const Card = ({ name }) => {
             <FontAwesomeIcon icon={faListCheck} />
           ) : name === 'Developing...' ? (
             <FontAwesomeIcon icon={faWrench} />
+          ) : name === 'Museum' ? (
+            <FontAwesomeIcon icon={faLandmark} />
           ) : (
             ''
           )}

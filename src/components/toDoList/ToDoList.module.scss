@@ -59,14 +59,12 @@
     overflow-y: auto;
     height: 350px;
         &::-webkit-scrollbar{
-            width: 8px;
-            
+            width: 8px;           
         }
         &::-webkit-scrollbar-thumb{
             width: 20px;
             height: 20px;
             background: rgb(68, 18, 118);
-            // border-radius: 3px;
         }
         &::-webkit-scrollbar-track{
             background: #dddd;
