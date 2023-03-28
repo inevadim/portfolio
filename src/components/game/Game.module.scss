@@ -1,0 +1,42 @@
+.wrapper{
+    // background-color: red;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .wrapperDashboard{
+        width:350px;
+        height: 30px;
+        background-color: rgb(69, 67, 67);
+        display: flex;
+
+        .dashboardItem{
+            background-color: aliceblue;
+            margin: 2px;
+        }
+    }
+
+    .wrapperItems{
+        background-color: gray;
+        display: flex;
+        width:250px;
+        height: 200px;
+        flex-wrap: wrap;
+        border-radius: 0 0 10px 10px;
+        .wrapperItem{
+            // border: 1px solid;
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+
+            &:hover{
+                background-color: rgb(80, 80, 80);
+                transition-duration: 0.2s;
+            }
+        }
+    }
+}

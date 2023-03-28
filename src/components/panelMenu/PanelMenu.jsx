@@ -23,7 +23,9 @@ export const PanelMenu = () => {
       <a href="http://sopockin-museum.j29866cb.beget.tech/" target={'_blank'} rel="noreferrer">
         <Card name="Museum" />
       </a>
-      <Card name="Developing..." />
+      <Link to="portfolio/Timer" onClick={() => dispatch(addItemMenu('timer'))}>
+        <Card name="timer" />
+      </Link>
       <Card name="Developing..." />
     </div>
   );

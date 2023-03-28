@@ -1,0 +1,22 @@
+.wrapper{
+    width: 500px;
+    height: 300px;
+    background-color: rgba(177, 190, 201, 0.761);
+    margin: 0 auto;
+
+    .wrapperToDo{
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        border: 1px rgb(127, 122, 122) solid;
+        overflow: auto;
+        border-radius: 50px 50px 0 50px;
+        padding: 10px;
+
+        .wrapperItem{
+            border-bottom: 1px rgb(127, 122, 122) solid;
+            margin-left: 10px;
+            margin-right: 20px;
+        }
+    }
+}

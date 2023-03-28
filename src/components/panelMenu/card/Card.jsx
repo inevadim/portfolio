@@ -6,6 +6,7 @@ import {
   faListCheck,
   faWrench,
   faLandmark,
+  faClock,
 } from '@fortawesome/free-solid-svg-icons';
 
 export const Card = ({ name }) => {
@@ -25,6 +26,8 @@ export const Card = ({ name }) => {
             <FontAwesomeIcon icon={faWrench} />
           ) : name === 'Museum' ? (
             <FontAwesomeIcon icon={faLandmark} />
+          ) : name === 'timer' ? (
+            <FontAwesomeIcon icon={faClock} />
           ) : (
             ''
           )}
